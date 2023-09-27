@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        #container {
+            position: relative;
+        }
+
+        #train {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+        }
+        #table{
+            padding:200px;
+        }
+
+        #buttons,
+        #para {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        #start,
+        #stop {
+            margin: 0 10px;
+        }
+        h1{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="train">
+            <img src="train.jpg" width="200px" height="200px">
+        </div>
+    </div>
+    <div id="table">
+        <div id="para">
+            <h1>Click the following buttons to handle animation</h1>
+        </div>
+        <div id="buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+    </div>
+
+    <script>
+        const train = document.getElementById("train");
+        const startButton = document.getElementById("start");
+        const stopButton = document.getElementById("stop");
+        let animationFrameId = null;
+        function animate() {
+            train.style.left = `${train.offsetLeft + 1}px`;
+            if (train.offsetLeft >= window.innerWidth) {
+                train.style.left = "0px";
+            }
+            animationFrameId = requestAnimationFrame(animate);
+        }
+        startButton.addEventListener("click", function() {
+            if (!animationFrameId) {
+                animate();
+            }
+        });
+        stopButton.addEventListener("click", function() {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+        });
+    </script>
+</body>
+</html>

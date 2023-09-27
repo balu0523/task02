@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 14</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Task 14.css">
+</head>
+<body>
+    <center>
+        <form onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <h1>Registration form</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">First Name</label></td>
+                    <td><input class="form-control my-3" type="text" id="firstName" /></td>
+                    <td><span id="firstNameError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Last Name</label></td>
+                    <td><input class="form-control my-3" type="text" id="lastName" /></td>
+                    <td><span id="lastNameError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Email</label></td>
+                    <td><input class="form-control my-3" type="email" id="email" /></td>
+                    <td><span id="emailError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Password</label></td>
+                    <td><input class="form-control my-3" type="password" id="password" /></td>
+                    <td><span id="passwordError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Re-enter Password</label></td>
+                    <td><input class="form-control my-3" type="password" id="rePassword" /></td>
+                    <td><span id="rePasswordError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Gender</label></td>
+                    <td colspan="2"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Male</label></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">     </label></td>
+                    <td colspan="2"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Female</label></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Age</label></td>
+                    <td><input class="form-control my-3" type="number" id="age" /></td>
+                    <td><span id="ageError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Phone number</label></td>
+                    <td><input class="form-control my-3" type="number" id="phoneNumber" /></td>
+                    <td><span id="phoneNumberError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Address</label></td>
+                    <td><textarea class="form-label my-3" id="address"></textarea></td>
+                    <td><span id="addressError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">State</label></td>
+                    <td><input class="form-control my-3" type="text" id="state" /></td>
+                    <td><span id="stateError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Country</label></td>
+                    <td>
+                        <select class="form-select my-3 text-secondary" id="country">
+                            <option>Please select your Country</option>
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                            <option>Canada</option>
+                            <option>China</option>
+                            <option>Russia</option>
+                        </select>
+                    </td>
+                    <td><span id="countryError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label my-3">Languages Known</label></td>
+                    <td>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="language1" name="languages" value="English">
+                            <label class="form-check-label" for="language1">English</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="language2" name="languages" value="Kannada">
+                            <label class="form-check-label" for="language2">Kannada</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="language3" name="languages" value="Hindi">
+                            <label class="form-check-label" for="language3">Hindi</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="language4" name="languages" value="Telugu">
+                            <label class="form-check-label" for="language4">Telugu</label>
+                        </div>
+                        <span id="languagesError" style="color: red;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="checkbox" id="declaration" value="English">
+                        <label class="form-check-label" for="declaration">Hereby I declare all the details given are true</label>
+                    </td>
+                    <td><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            login to <a href="ethunus">etunus</a> website</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button class="btn btn-danger" type="submit">Register</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rePassword = document.getElementById('rePassword').value;
+            const age = document.getElementById('age').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const address = document.getElementById('address').value;
+            const state = document.getElementById('state').value;
+            const country = document.getElementById('country').value;
+            const languages = document.querySelectorAll('input[name="languages"]:checked').length;
+
+            const firstNameError = document.getElementById('firstNameError');
+            const lastNameError = document.getElementById('lastNameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const rePasswordError = document.getElementById('rePasswordError');
+            const ageError = document.getElementById('ageError');
+            const phoneNumberError = document.getElementById('phoneNumberError');
+            const addressError = document.getElementById('addressError');
+            const stateError = document.getElementById('stateError');
+            const countryError = document.getElementById('countryError');
+            const languagesError = document.getElementById('languagesError');
+
+            let isValid = true;
+
+            if (firstName.trim() === "") {
+                firstNameError.textContent = 'Poor';
+                isValid = false;
+            } else {
+                firstNameError.textContent = '';
+            }
+
+            if (lastName.trim() === "") {
+                lastNameError.textContent = 'Poor';
+                isValid = false;
+            } else {
+                lastNameError.textContent = '';
+            }
+
+            if (email.trim() === "") {
+                emailError.textContent = 'Poor';
+                isValid = false;
+            } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                emailError.textContent = 'Poor';
+                isValid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            if (password.trim() === "") {
+                passwordError.textContent = 'Poor';
+                isValid = false;
+            } else {
+                passwordError.textContent = '';
+            }
+
+            if (rePassword.trim() === "") {
+                rePasswordError.textContent = 'Poor or mismatched';
+                isValid = false;
+            } else if (rePassword !== password) {
+                rePasswordError.textContent = 'Poor or mismatched';
+                isValid = false;
+            } else {
+                rePasswordError.textContent = '';
+            }
+
+            if (age.trim() === "") {
+                ageError.textContent = 'Poor';
+                isValid = false;
+            } else if (isNaN(age) || age < 0 || age > 150) {
+                ageError.textContent = 'Poor';
+                isValid = false;
+            } else {
+                ageError.textContent = '';
+            }
+
+            if (phoneNumber.trim() === "") {
+                phoneNumberError.textContent = 'Poor';
+                isValid = false;
+            } else if (isNaN(phoneNumber) || phoneNumber.length !== 10) {
+                phoneNumberError.textContent = 'Poor';
+                isValid = false;
+            } else {
+                phoneNumberError.textContent = '';
+            }
+
+            if (address.trim() === "") {
+                addressError.textContent = 'Poor';
+                isValid = false;
+            } else {
+                addressError.textContent = '';
+            }
+
+            if (state.trim() === "") {
+                stateError.textContent = 'Poor';
+                isValid = false;
+            } else {
+                stateError.textContent = '';
+            }
+            return isValid;
+        }
+    </script>
+</body>
+</html>

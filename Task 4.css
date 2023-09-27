@@ -1,0 +1,36 @@
+ #image1 {
+                background-image: url('https://images.photocase.com/o/oiohc8l9/bjdcdhra/photocasebjdcdhra3.jpg?1690816979');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            #image2{
+                background-image: url('https://img.freepik.com/premium-photo/blue-tones-water-waves-surface-as-nature-background_157912-1417.jpg?size=626&ext=jpg');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            .card-header{
+                height:300px;
+            }
+            .card-body{
+                height:300px;
+            }
+            .container {
+                padding: 50px 50px 50px 50px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding-top: 60px;
+            }
+            a{
+                color:rgb(235, 135, 14);
+            }

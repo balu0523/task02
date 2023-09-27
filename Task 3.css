@@ -1,0 +1,18 @@
+main{
+    padding: 50px 50px 50px 50px;   
+}
+nav{
+    padding-left:10px;
+    padding-right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+footer{
+    padding-left:10px;
+    padding-right: 10px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: rgb(0, 141, 151);
+}

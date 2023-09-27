@@ -1,0 +1,22 @@
+ [class*="col"] {       
+    padding: 1rem;        
+    background-color: rgb(26, 175, 221);
+    font-size: 30px;    
+}    
+.container-layout {     
+    display: flex;      
+    height: 100vh;    
+}     
+.left-column {        
+    flex: 3;        
+    background-color: white;      
+    text-align: center;       
+    font-size: small;
+}
+.right-column {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.727);
+    text-align: center;
+    color: white;
+    font-size: small;
+}

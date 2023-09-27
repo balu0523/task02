@@ -1,0 +1,61 @@
+ h1{
+            font-family:FSP DEMO-Blue Vinyl;
+        }
+        body {
+            background-color: #fafafa;
+            padding: 100px;
+        }
+
+        .login-container {
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+        .input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .input-group input[type="text"],
+        .input-group input[type="password"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #e1e1e1;
+            border-radius: 10px;
+            height: 45px;
+        }
+        .input-group .input-group-text img {
+            height: 30px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .remember-me {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .remember-me input[type="checkbox"] {
+            margin-right: 10px;
+        }
